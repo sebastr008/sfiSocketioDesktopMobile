@@ -44,14 +44,35 @@ https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev/mobile/index.html
 
 ## Sitios web
 
-No olvidar modificar en sketch.js para el sitio desktop y mobile esta parte 
+No olvides modificar el archivo sketch.js para el sitio desktop y mobile en esta parte 
 del código:
 
 ``` js
-// Connect to the WebSocket server
-//let socketUrl = 'wss://cuddly-memory-7r95p6vgr7hxp4-8080.app.github.dev/:8080';
-let socketUrl = 'ws://localhost:8080';
-socket = new WebSocket(socketUrl);
+    //let socketUrl = 'http://localhost:3000';
+    let socketUrl = 'https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev';
+    socket = io(socketUrl); 
+```
+
+Nota que la línea localhost está comentada. Esta línea permite hacer pruebas locales 
+en caso de que tengas un computador con WiFi. Ten presente que la aplicación en tu 
+móvil se conectará a tu computador y por tanto necesitarás conocer la dirección 
+IP de este. Eso lo haces abriendo el símbolo del sistema de windows y escribiendo 
+el comando:
+
+``` bash
+ipconfig
+```
+En mi caso busco:
+
+Wireless LAN adapter Wi-Fi:
+IPv4 Address. . . . . . . . . . . : 192.168.1.17
+
+Y en el archivo sketch.js de la aplicación móvil haría la siguiente modificación
+
+``` js
+    let socketUrl = 'http://192.168.1.17:3000';
+    //let socketUrl = 'https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev';
+    socket = io(socketUrl);
 ```
 
 > [!WARNING]  

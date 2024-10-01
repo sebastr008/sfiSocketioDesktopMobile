@@ -8,8 +8,8 @@ function setup() {
     createCanvas(400, 400);
     background(220);
 
-    let socketUrl = 'http://localhost:3000';
-    //let socketUrl = 'https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev';
+    //let socketUrl = 'http://localhost:3000';
+    let socketUrl = 'https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/';
     socket = io(socketUrl); 
 
     // Evento de conexión exitosa

@@ -9,8 +9,8 @@ function setup() {
     background(220);
 
     // Conectar al servidor de Socket.IO
-    let socketUrl = 'http://192.168.1.17:3000';
-    //let socketUrl = 'https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev';
+    //let socketUrl = 'http://192.168.1.17:3000';
+    let socketUrl = 'https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/';
     socket = io(socketUrl);
 
     socket.on('connect', () => {

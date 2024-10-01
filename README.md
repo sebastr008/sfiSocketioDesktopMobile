@@ -24,12 +24,16 @@ Los pasos para ejecutar la aplicación son:
 * Ejecutar npm start
 * Leer la url que expondrá Github para contar remotamente los clientes.
 
-![image](https://github.com/user-attachments/assets/a6ad0e38-a74c-4219-970d-ceb4474b5321)
+![image](https://github.com/user-attachments/assets/a3ed9256-015b-497e-98e6-b33f62dad611)
+
+En la columna Visibility click derecho en Private y cámbialo a Public. Ten presente 
+que si lo dejas Private tendrás que autenticarte con tus credenciales de github tanto 
+tu computador como en tu celular.
 
 En este caso sería (para este ejemplo, en tu caso serán distintas):
 
 ``` js
-https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev/:8080
+https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/
 ``` 
 
 * Detener el servidor (con la combinación CTRL+C en la terminal)
@@ -38,8 +42,8 @@ https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev/:8080
 * En los clientes las aplicaciones web estarían corriendo en (para este ejemplo, en tu caso serán distintas):
 
 ``` js
-https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev/desktop/index.html
-https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev/mobile/index.html
+https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/desktop/index.html
+https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/mobile/index.html
 ```
 
 ## Sitios web
@@ -47,10 +51,22 @@ https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev/mobile/index.html
 No olvides modificar el archivo sketch.js para el sitio desktop y mobile en esta parte 
 del código:
 
+Desktop
+
 ``` js
     //let socketUrl = 'http://localhost:3000';
-    let socketUrl = 'https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev';
+    let socketUrl = 'https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/';
     socket = io(socketUrl); 
+```
+
+Mobile:
+
+``` js
+    // Conectar al servidor de Socket.IO
+    //let socketUrl = 'http://192.168.1.17:3000';
+    let socketUrl = 'https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/';
+    socket = io(socketUrl);
+
 ```
 
 Nota que la línea localhost está comentada. Esta línea permite hacer pruebas locales 

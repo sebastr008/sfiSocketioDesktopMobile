@@ -94,5 +94,7 @@ Y en el archivo sketch.js de la aplicación móvil haría la siguiente modificac
 > [!WARNING]  
 > Una vez termines de hacer las pruebas NO OLVIDES detener el servidor
 
+![image](https://github.com/user-attachments/assets/2dee0177-c306-48d6-8400-0b5f76bcd99a)
+
 
 

@@ -37,19 +37,26 @@ diferente:
 
 ![image](https://github.com/user-attachments/assets/a3ed9256-015b-497e-98e6-b33f62dad611)
 
-En la columna Visibility click derecho en Private y cámbialo a Public. Ten presente 
+En la columna Visibility, prsiona click derecho en Private y cámbialo a Public. Ten presente 
 que si lo dejas Private tendrás que autenticarte con tus credenciales de github tanto 
-tu computador como en tu celular.
+en tu computador (sitio web de escritorio) como en tu celular (sitio web móvil)
 
 En este caso sería (para este ejemplo, en tu caso serán distintas):
 
 ``` js
 https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/
-``` 
+```
 
-* Detener el servidor (con la combinación CTRL+C en la terminal)
+Ahora que conoces todas las URL que necesitarás sigue esto pasos:
+
+* Detener los servidores (con la combinación CTRL+C en la terminal)
 * Modificar la URL del socketUrl en cada aplicación: mobile, desktop.
-* npm start
+* Inicia de nuevo los servidores:
+
+``` bash
+npm start
+```
+
 * En los clientes las aplicaciones web estarían corriendo en (para este ejemplo, en tu caso serán distintas):
 
 ``` js
@@ -80,15 +87,27 @@ Mobile:
 
 ```
 
-Nota que la línea localhost está comentada. Esta línea permite hacer pruebas locales 
-en caso de que tengas un computador con WiFi. Ten presente que la aplicación en tu 
-móvil se conectará a tu computador y por tanto necesitarás conocer la dirección 
-IP de este. Eso lo haces abriendo el símbolo del sistema de windows y escribiendo 
-el comando:
+> [!WARNING]  
+> Una vez termines de hacer las pruebas NO OLVIDES apagar el CODESPACES. Esto es fundamental,
+> si no lo haces no podrás hacer más pruebas desde CodeSpaces y tendrás que hacer las pruebas
+> locales.
+
+![image](https://github.com/user-attachments/assets/2dee0177-c306-48d6-8400-0b5f76bcd99a)
+
+
+## PRUEBAS LOCALES
+
+Puedes hacer esta experiencia sin necesidad de usar codespaces, es decir, puedes correr los servidores 
+de manera local en tu computador, pero hay unas condiciones. Nota que la línea localhost está comentada. Esta línea 
+permite hacer pruebas locales, pero tendrás que tener un computador con WiFi y permisos (firewall configurado) para 
+que el celular pueda acceder a los servidores que están corriendo en tu computador. Como la aplicación en tu 
+móvil se conectará a tu computador, necesitarás conocer la dirección IP del computador. Eso lo haces abriendo el 
+símbolo del sistema de windows y escribiendo el comando:
 
 ``` bash
 ipconfig
 ```
+
 En mi caso busco:
 
 Wireless LAN adapter Wi-Fi:
@@ -101,11 +120,5 @@ Y en el archivo sketch.js de la aplicación móvil haría la siguiente modificac
     //let socketUrl = 'https://probable-fiesta-q9q4pjvqq73949w-8080.app.github.dev';
     socket = io(socketUrl);
 ```
-
-> [!WARNING]  
-> Una vez termines de hacer las pruebas NO OLVIDES detener el servidor
-
-![image](https://github.com/user-attachments/assets/2dee0177-c306-48d6-8400-0b5f76bcd99a)
-
 
 

@@ -15,7 +15,7 @@ del touch del cliente móvil. Con esta información, pintará un círculo en la 
 De nuevo, la comunicación entre los dos sitios se realizará mediante socket.io.
 
 * El archivo server.js contiene el código de los servidores.
-* En la carpeta public están los dos sitios web que estarán.
+* En la carpeta public están los dos sitios web: mobile y desktop.
 
 Los pasos para ejecutar la aplicación son:
 

@@ -7,12 +7,12 @@
 ## Servidores
 
 El proyecto cuenta con dos servidores. Un servidor web y un servidor 
-que gestiona la conexión socket.io (websocket). La tarea del servidor web es enviar dos 
-posibles sitios. Un sitio móvil y un sitio para escritorio. El sitio 
-móvil leerá la posición x,y del sensor touch y la enviará al sitio 
-de escritorio. Con esta información se colocará la posición 
-en un círculo en el sitio de escritorio. La comunicación entre los 
-dos sitios se realizará mediante socket.io.
+que gestiona la conexión socket.io (websocket). La tarea del servidor web es servir dos 
+posibles sitios: un sitio móvil y un sitio de escritorio. El sitio 
+móvil leerá la posición x,y del sensor touch del celular y la enviará al servidor socket.io. 
+Si hay un cliente de escritorio corriendo el sitio web de escritorio, este podría recibir la información 
+del touch del cliente móvil. Con esta información, pintará un círculo en la posición x,y recibida. 
+De nuevo, la comunicación entre los dos sitios se realizará mediante socket.io.
 
 * El archivo server.js contiene el código de los servidores.
 * En la carpeta public están los dos sitios web que estarán.

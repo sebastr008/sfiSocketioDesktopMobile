@@ -19,10 +19,21 @@ De nuevo, la comunicación entre los dos sitios se realizará mediante socket.io
 
 Los pasos para ejecutar la aplicación son:
 
-* Clonar el repositorio en codespaces.
-* Ejecutar npm install
-* Ejecutar npm start
-* Leer la url que expondrá Github para contar remotamente los clientes.
+* Clonar el repositorio en el codespaces.
+* Instalar las dependencias con el comando
+
+``` bash
+npm install
+```
+
+* Ejecutar los servidores con:
+
+``` bash
+npm start
+```
+
+* Leer la url que expondrá Github para contar remotamente los clientes. En mi caso es la siguiente, pero en tu caso será una completamante
+diferente:
 
 ![image](https://github.com/user-attachments/assets/a3ed9256-015b-497e-98e6-b33f62dad611)
 

@@ -10,8 +10,8 @@ function setup() {
 
     // Conectar al servidor de Socket.IO
     //let socketUrl = 'http://192.168.1.17:3000';
-    let socketUrl = 'https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/';
-    socket = io(socketUrl);
+    //let socketUrl = 'https://supreme-space-eureka-x9wpv75jjpf6gpv-3000.app.github.dev/';
+    socket = io();
 
     socket.on('connect', () => {
         console.log('Connected to server');
